@@ -7,13 +7,14 @@ class Apartment
     @monthly_rent = unit[:monthly_rent]
     @bathrooms = unit[:bathrooms]
     @bedrooms = unit[:bedrooms]
-    # @renter = []
+    # @renter = unit[] #hash {renter: unit}???
   end
 
   def add_renter(renter)
-    require "pry"; binding.pry
+    # require "pry"; binding.pry
     @renter = renter
   end
+
 
 
 end
