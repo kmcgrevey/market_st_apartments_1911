@@ -13,4 +13,18 @@ class ApartmentTest < Minitest::Test
     assert_instance_of Apartment, @unit1
   end
 
+  def test_it_has_attributes
+    assert_equal "A1", @unit1.number
+    assert_equal 1200, @unit1.monthly_rent
+    assert_equal 1, @unit1.bathrooms
+    assert_equal 1, @unit1.bedrooms
+    assert_nil @unit1.renter
+  end
+
+  def test_it_can_add_a_renter
+    @unit1.add_renter(@renter1)
+    # require "pry"; binding.pry
+    assert_equal @renter1, @unit1.renter
+  end
+
 end
